@@ -1,0 +1,51 @@
+#include <iostream>
+#include <conio.h>
+
+using namespace std;
+
+int main()
+{
+	int array[50];
+	int i,j,size,sort;
+
+	cout << "Array size: ";
+	cin >> size;
+
+	for (i=0;i<size;i++)
+	{
+		cout << "Enter the elements: ";
+		cin >>array[i];
+	}
+	cout << endl << endl;
+
+	cout << "Your Entered data: " << endl;
+	for(i=0;i<size;i++)
+	{
+		cout << array[i] << ", ";
+	}
+
+	cout << endl << endl;
+
+	cout << "Sorting... ";
+
+	for(i=0;i<size;i++)
+	{
+		for(j=i+1;j<size;j++)
+		{
+			if (array[i]>array[j])
+			{
+				sort=array[i];
+				array[i]=array[j];
+				array[j]=sort;
+			}
+		}
+	}
+	cout << "The array after sorting: " << endl;
+	for(i=0;i<size;i++)
+	{
+		cout << array[i] << ", ";
+	}
+
+	_getch();
+	return 0;
+}
