@@ -1,0 +1,97 @@
+#include <iostream>
+#include <conio.h>
+#include <cstdlib>
+
+using namespace std;
+
+int add(int a,int b)
+{
+	int p;
+	p=a+b;
+
+	return p;
+}
+
+int sub(int a,int b)
+{
+	int s;
+	s=a-b;
+	return s;
+}
+
+int mul(int a, int b)
+{
+	int m;
+	m=a*b;
+	return m;
+}
+
+int di(int a, int b)
+{
+	int d;
+	d=a/b;
+	return d;
+}
+
+int mod(int a, int b)
+{
+	int modu;
+	modu=a % b;
+	return modu;
+}
+
+int main()
+{
+	int menu,a,b,answer,pp,ss,mm,dd,mo;	
+	char yn;
+
+	int i;
+	
+	do{
+	cout << "Menu: " << endl;
+	cout << "1. Add" << endl;
+	cout << "2. Subtract" << endl;
+	cout << "3. Multiply" << endl;
+	cout << "4. Divide" << endl;
+	cout << "5. Modulus" << endl;
+
+	cout<< "Enter your choice: ";
+	cin >>menu;
+
+	cout << "Enter your two numbers: ";
+	cin >> a >> b;
+
+	
+	switch(menu)
+	{
+	case 1:
+		pp = add(a,b);
+		cout << "Result: " << pp << endl;
+		break;
+	case 2:
+		ss = sub(a,b);
+		cout << "Result: " << ss << endl;
+		break;
+	case 3:
+		mm = mul(a,b);
+		cout << "Result: " << mm << endl;
+		break;
+	case 4:
+		dd = di(a,b);
+		cout << "Result: " << dd << endl;
+		break;
+	case 5:
+		cout << "Result: " <<mod(a,b)<< endl;
+		break;
+	default:
+		cout << " Invalid input: " << endl;
+		continue;
+	}
+	cout<<"Continue? Y/N: "; 
+       cin>> yn; 
+	}while(yn=='y'||yn=='Y'); 
+	 system("PAUSE"); 
+
+	 _getch();
+	return EXIT_SUCCESS; 
+}
